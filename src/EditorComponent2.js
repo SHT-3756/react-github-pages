@@ -16,7 +16,7 @@ function EditorComponent2() {
         const formData = new FormData();
         formData.append("image", file);
         const fileName = file.name;
-        console.log(formData, "formData");
+        console.log(formData, "formData1");
       }
     };
   };
