@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
+import Editor from "./EditorComponent";
+import Editor2 from "./EditorComponent2";
 function App() {
+  const [desc, setDesc] = useState("");
+
+  const onEditorChange = (value) => {
+    setDesc(value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Editor value={desc} onChange={onEditorChange} />
     </div>
   );
 }
